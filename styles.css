@@ -1,0 +1,37 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: greenyellow;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    margin: 3em;
+
+    
+}
+
+.Character {
+    width: 320px;
+    height: 320px;
+    background: none;
+    overflow: hidden;
+    position: relative;
+    animation: walkleftSpritesheet 5s linear infinite;
+    transform-origin: right;
+
+    border: 2px solid black;
+}
+.Character_sprite {
+    animation: moveSpritesheet 0.5s steps(4) infinite;
+    width: 1280px;
+    /* image-rendering: pixelated; */
+}
+
+@keyframes moveSpritesheet {
+    from {transform: translate3d(0, 0, 0);}
+    to {transform: translate3d(-100%, 0, 0);}
+}
+

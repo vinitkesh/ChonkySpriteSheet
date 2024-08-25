@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprite Cat</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- <div class="Character">
+        <img src="./Cat-walk-left4x1.png" alt="Cat" class="Character_sprite">
+    </div> -->
+
+    <h1>Cat animation using with Sprite Sheet !</h1>
+    <div class="Character">
+        <img src="./Cat-left-right-sleep.png" alt="Cat" class="Character_sprite Character_sprite_click">
+    </div>
+    <h2>Click the cat!</h2>
+
+    <h1>The Sprite frames for the above animation :</h1>
+    <img src="./Cat-left-right-sleep.png" style="width: 50%;" alt="">
+
+    <code class="Javascript">
+
+    </code>
+</body>
+
+    <script>
+        document.querySelectorAll('.Character_sprite_click').forEach(function(character) {
+            character.style.position = 'absolute'; // Ensure the character can move freely
+            
+            character.addEventListener('click', function () {
+                let top = parseInt(this.style.top) || 0;
+
+                
+                // Move up by 320px
+                let newTop = top - 320;
+                
+                // Check if the new position would be out of the viewport
+                if (newTop <= -this.clientHeight) {
+                    this.style.top = '0';
+                } else {
+                    this.style.top = newTop + 'px';
+                }
+            });
+        });
+        </script>
+    
+    
+
+</html>

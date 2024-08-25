@@ -1,8 +1,8 @@
-*{
-    font-family:Arial, Helvetica, sans-serif;
+* {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
     background: wheat;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@ body{
 
     margin: 3em;
 
-    
+
 }
 
 .Character {
@@ -24,6 +24,7 @@ body{
 
     border: 2px solid black;
 }
+
 .Character_sprite {
     animation: moveSpritesheet 0.5s steps(4) infinite;
     width: 1280px;
@@ -31,7 +32,11 @@ body{
 }
 
 @keyframes moveSpritesheet {
-    from {transform: translate3d(0, 0, 0);}
-    to {transform: translate3d(-100%, 0, 0);}
-}
+    from {
+        transform: translate3d(0, 0, 0);
+    }
 
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}

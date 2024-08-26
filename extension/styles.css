@@ -1,0 +1,106 @@
+.cat-canvas {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    height: max-content;
+    border-radius: 20px;
+    width: max-content;
+
+    background-color: wheat;
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+
+    width: 300px;
+
+    position: relative;
+
+}
+
+.Character {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+
+    /* border: 2px solid black; */
+    z-index: 100 !important;
+
+    animation: move-cat 8s steps(40) infinite;
+
+}
+
+.Character:hover {
+    cursor: pointer;
+}
+
+.settings{
+    position: absolute;
+    
+    top: 0;
+    right:0;
+
+    padding: 12px;
+}
+
+.settings:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.settings svg{
+    width: 20px;
+    height: 20px;
+}
+
+
+.Character_sprite_click {
+    /* top: 0px; */
+    left: 0;
+    animation: moveSpritesheet 0.5s steps(4) infinite,change 8s steps(1) infinite;
+    width: 400px;
+    /* image-rendering: pixelated; */
+    z-index: 100 !important;
+
+}
+
+
+@keyframes moveSpritesheet {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-400px, 0, 0);
+    }
+}
+
+@keyframes change {
+    0% {
+        top:-100px;
+    }
+
+    50% {
+        top:0px;
+    }
+
+    100% {
+        top:-100px;
+    }
+}
+
+@keyframes move-cat {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(200px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+

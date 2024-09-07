@@ -8,3 +8,7 @@ Built the sprite sheet using : [piskelapp.com](https://www.piskelapp.com/p/creat
 <img src="./sprite.png" width="200" height="200" />
 
 <img src="./Cat-left-right-sleep.png" width="400" height="400" />
+
+```js
+const new = console;
+```
